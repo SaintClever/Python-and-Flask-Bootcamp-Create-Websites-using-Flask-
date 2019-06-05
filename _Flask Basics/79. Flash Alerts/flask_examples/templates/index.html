@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+    {% for mess in get_flashed_messages() %} <!-- mess is our variable that holds our flash alert -->
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+
+                <span aria-hidden="true">&times;</span>
+
+            </button>
+            {{ mess }} <!-- our flash alert -->
+        </div>
+    {% endfor %}
+
+
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.submit() }}
+    </form>
+
+{% endblock %}
+    

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h3>Thank you! Form info below</h3>
+
+    <ul>
+        <li>{{ session['breed'] }}</li>
+        <li>{{ session['neutered'] }}</li>
+        <li>{{ session['food'] }}</li>
+        <li>{{ session['mood'] }}</li>
+        <li>{{ session['feedback'] }}</li>
+    </ul>
+
+{% endblock %}

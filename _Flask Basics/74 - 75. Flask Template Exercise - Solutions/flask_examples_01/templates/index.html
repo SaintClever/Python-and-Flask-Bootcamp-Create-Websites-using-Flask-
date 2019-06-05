@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div>
+        <form action="{{ url_for('report') }}">
+            <label for="username">Username:</label>
+            <input type="text" name="username">
+            <input type="submit" value="Sumbit">
+        </form>
+    </div>
+
+{% endblock %}

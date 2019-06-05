@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Welcome to the Puppy Survey</h1>
+
+    <form method="POST">
+        {{ form.hidden_tag() }}
+
+        {{ form.breed.label }} {{ form.breed }} <br>
+        {{ form.neutered.label }} {{ form.neutered }} <br>
+        {{ form.food.label }} {{ form.food }} <br>
+        {{ form.mood.label }} {{ form.mood }} <br>
+        {{ form.feedback.label }} <br> {{ form.feedback }} <br>
+
+        {{ form.submit() }}
+    </form>
+    
+{% endblock %}

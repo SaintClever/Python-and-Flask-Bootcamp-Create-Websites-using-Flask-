@@ -1,0 +1,5 @@
+{% extends "05-base.html"%}
+{% block content %}
+<h1>This is the page for the puppy: {{name|capitalize}}.</h1>
+<h1><a href="{{ url_for('static', filename='puppy_pic.jpg') }}"></a></h1>
+{% endblock %}

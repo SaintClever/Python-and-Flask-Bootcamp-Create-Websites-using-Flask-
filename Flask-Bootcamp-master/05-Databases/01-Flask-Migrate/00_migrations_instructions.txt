@@ -1,0 +1,59 @@
+Hey there! A lot of the commands shown in the video lecture are run directly
+into the command line. Because of this, we've posted the commands here in this
+simple text file as well so you can reference them :)
+
+We first set up our migrations directory by running:
+
+  flask db init
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!! IMPORTANT NOTE !!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+If you get this error:
+Error: Could not locate Flask application.
+You did not provide the FLASK_APP environment variable.
+
+Then run the following code:
+
+MacOS/Linux users run:
+export FLASK_APP=BasicModelApp.py
+
+Windows Users need to run:
+set FLASK_APP=BasicModelApp.py
+
+This allows the flask command line tools to understand what Flask App you are
+referencing. More info on this: http://flask.pocoo.org/docs/0.12/cli/
+
+In general the flask app should be set to whatever flask app
+you happen to be working on.
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+This creates a migration repository. You only run this command once at the start
+of you using migrations to manage changes to your database.
+
+You should now see a migrations folder with a versions folder. Now we will be
+able to keep track of changes to the database in case we later decide to update
+our models.
+
+Now that the folder has been created and set up, we can create pending migrations
+based on our current model. Right now our .py file is called BasicModelApp.py, but
+for larger projects later on we will have this file simply be called models.py.
+
+Its time to now use the migrate command, this will create a unique id for the
+migration. Typically this unique id is just a number code like a437f282d3 , which
+isn't helpful for trying to remember past changes. So we can add a -m flag which
+allows us to add a message to our unique id.
+
+The next command then will look like this for us:
+
+flask db migrate -m "created puppy table"
+
+Keep in mind this command is not actually running this migration or updating our
+database based on model changes. Its just created a new file that can later be
+used to update the database. To run the pending migration just created, we use
+the upgrade command. Which looks like this:
+
+flask db upgrade

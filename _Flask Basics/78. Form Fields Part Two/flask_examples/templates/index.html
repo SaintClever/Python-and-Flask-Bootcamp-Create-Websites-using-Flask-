@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h3>Please fill out the form:</h3>
+
+    <form method="POST">
+
+        {{ form.hidden_tag() }}
+
+        {{ form.breed.label }} {{ form.breed }} <br>
+        {{ form.neutered.label }} {{ form.neutered }} <br>
+        {{ form.food.label }} {{ form.food }} <br>
+        {{ form.mood.label }} {{ form.mood }}
+        {{ form.feedback.label }} <br> {{ form.feedback }} <br>
+
+        {{ form.submit(class_="btn btn-primary") }}
+
+    </form>
+
+{% endblock %}

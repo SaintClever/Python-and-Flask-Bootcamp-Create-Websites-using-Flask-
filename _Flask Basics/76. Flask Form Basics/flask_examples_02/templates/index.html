@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flask Forms</title>
+</head>
+<body>
+    
+    <p>
+        {% if breed %}
+            Your breed is {{ breed }}
+        {% else %}
+            You didn't enter a breed
+        {% endif %}
+    </p>
+
+
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.breed.label }}
+        {{ form.breed }}
+        {{ form.submit() }}
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flask_wtf basics</title>
+
+    
+</head>
+<body>
+    
+    {% if breed %}
+        <p>Your breed is {{ breed }}</p>
+    {% else %}
+        <p>Please provide a breed</p>
+    {% endif %}
+
+
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.breed.label }} {{ form.breed }}
+        {{ form.submit() }}
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h3>Please provide your breed</h3>
+
+    <!-- flash alert -->
+    {% for my_breed in get_flashed_messages() %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>{{ my_breed }}</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    {% endfor %}
+
+    <!-- form -->
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.breed.label }}<br>
+        {{ form.breed }}<br><br>
+        {{ form.submit(class_="btn-primary") }}
+    </form>
+
+{% endblock %}

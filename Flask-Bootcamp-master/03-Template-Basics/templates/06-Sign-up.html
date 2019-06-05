@@ -1,0 +1,22 @@
+{% extends "06-base.html"%}
+{% block content %}
+<div class="jumbotron">
+
+
+<h1>Welcome to the sign up page!</h1>
+<p>We're excited to have you audition for our band</p>
+<p>This will redirect to a thank you page.</p>
+<p>
+  Please note, we're just puppies, so we haven't
+  learned how to save your information yet!
+</p>
+    <form action="{{url_for('thank_you')}}">
+       <label for="first">First Name</label>
+        <input type="text" name="first">
+        <label for="last">Last Name</label>
+        <input type="text" name="last">
+        <input type="submit" value="Submit Form">
+    </form>
+
+</div>
+{% endblock %}

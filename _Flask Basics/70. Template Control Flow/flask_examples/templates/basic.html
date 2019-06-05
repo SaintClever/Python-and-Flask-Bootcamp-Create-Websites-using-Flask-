@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- jinja variable -->
+    <h1>{{ mylist }}</h1>
+
+    <!-- jinja for loop -->
+    <ul>
+        {% for item in mylist %}
+        <li>{{item}}</li>
+        {% endfor %}
+    </ul>
+    
+
+    <!-- jinja for loop -->
+    <ul>
+        {% for pup in puppies %}
+        <li>{{pup}}</li>
+        {% endfor %}
+    </ul>
+
+
+    <!-- jinja if else statement. Try removing Rufus from your .py file and see the result -->
+    {% if 'Rufus' in puppies %}
+        <p>Found you Rufus!</p>
+    {% else %}
+        <p>Hmm.. Rufus is not in this list!</p>
+    {% endif %}
+
+
+    <!-- jinja if else statement. Try setting user_logged_in to false in you .py file and see the result -->
+    {% if user_logged_in %}
+        <p>Welcome back, you are now logged in!</p>
+    {% else %}
+        <p>Please log in!</p>
+    {% endif %}
+
+
+    <!-- if elif else -->
+    {% if user_logged_in == False %}
+        <p>Welcome back, you are now logged in!</p>
+    {% elif some_other_condition %}
+        <p>Semi logged in here? Is that even possible?!</p>
+    {% else %}
+        <p>Please log in!</p>
+    {% endif %}
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div>
+        <p>Please input password</p>
+
+        <form action="{{ url_for('report') }}">
+            <label for="username">Username:</label>
+            <input type="text" name="username">
+            <input type="submit" value="Submit Value">
+        </form>
+    </div>
+
+{% endblock %}

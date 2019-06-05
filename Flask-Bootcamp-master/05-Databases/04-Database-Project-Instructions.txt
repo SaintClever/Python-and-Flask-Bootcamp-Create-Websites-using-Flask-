@@ -1,0 +1,20 @@
+WELCOME TO YOUR PROJECT! WE WILL BE EXPANDING THE PREVIOUS WEBSITE TO ADD IN
+OWNERS. WE WILL BE COMBINING EVERYTHING WE'VE LEARNED IN THIS SECTION SO FAR.
+
+YOU HAVE SEVERAL OPTIONS TO APPROACH THIS PROJECT:
+1. TREAT THIS AS A CODE ALONG PROJECT AND CONTINUE BY WATCHING THE VIDEOS
+2. FOLLOW ALONG WITH THE DIRECTIONS BELOW (SUGGESTED STEPS)
+3. START COMPLETELY FROM SCRATCH (MOST CHALLENGING APPROACH)
+
+HERE ARE THE GENERAL STEPS FOR THE PROJECT, MAKE SURE TO WATCH THE PROJECT
+OVERVIEW VIDEO FOR FULL DETAILS:
+
+* Copy/Paste or Duplicate the 03-Databases-in-Views Folder
+* Add in an Owners Model (similar to model from 02-Relationships lectures)
+* Create a relationship between puppies and owners (one-to-one)
+* Update __repr__ method for puppies to display their owner.
+* Use flask db command line arguments to migrate and upgrade your Owner Model
+* Create a view and form that lets you add new owners to your database, when you
+  add these owners you should be connecting them to a puppy by puppy id.
+* Flash() a message upon creating a new owner stating the new owners name.
+* Go back to the list view to confirm the new owner and puppy.

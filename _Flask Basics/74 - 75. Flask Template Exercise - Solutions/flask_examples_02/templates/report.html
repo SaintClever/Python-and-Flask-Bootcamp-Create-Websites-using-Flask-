@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="jumbotron">
+
+        {% if requirements_met %}
+            <p>Requirements met</p>
+        {% else %}
+
+        <ul>
+            {% if not char_islower %}
+                <li>Lowercase character not present</li>
+            {% endif %}
+
+            {% if not char_isupper %}
+                <li>Uppercase character not present</li>
+            {% endif %}
+
+            {% if not char_isdigit %}
+                <li>Last character isn't a digit</li>
+            {% endif %}
+        </ul>
+
+        {% endif %}
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Puppy Adoption Form!</h1>
+
+      <!-- Things we will cover
+      1. Linking Radio Buttons
+      2. Drop-down Menus
+      3. Text Area inputs -->
+
+
+        <form method="get">
+          <h3>Do you already own a dog?</h3>
+          <label for="yes">Yes</label>
+          <input type="radio" id="yes" name="dog_choice" value="yes">
+
+          <label for="no">No:</label>
+          <input type="radio" id="no" name= "dog_choice" value="no">
+
+
+          <p>How clean is your house (Rated 1-3 with 3 being cleanest))</p>
+          <select name="stars">
+            <option value="Great">3</option>
+            <option value="Okay">2</option>
+            <option value="Bad">1</option>
+          </select>
+
+
+          <p>Any other comments?</p>
+
+          <textarea name="name" rows="8" cols="80"></textarea>
+
+
+          <input type="submit" name="" value="Submit Feedback">
+
+
+        </form>
+
+
+  </body>
+</html>

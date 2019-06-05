@@ -1,0 +1,12 @@
+.firstDiv {
+  color: blue;
+}
+
+.secondDiv {
+  /* background: grey; */
+  background-color: gray;
+}
+
+#singledout {
+  color: red;
+}

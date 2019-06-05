@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div>
+        <p>Thank you for signing up {{first_name}} {{last_name}}!</p>
+        <a href="{{ url_for('index') }}">Return Home</a>
+    </div>
+
+{% endblock %}

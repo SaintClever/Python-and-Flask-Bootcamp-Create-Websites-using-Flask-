@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div>
+
+        {% if requirements_met %}
+            <p>Password approved</p>
+        {% else %}
+            <ul>
+                {% if not char_isupper %}
+                    <li>No uppercase provided</li>
+                {% endif %}
+
+                {% if not char_islower %}
+                    <li>No lowercase provided</li>
+                {% endif %}
+
+                {% if not char_int %}
+                    <li>Last character is not int</li>
+                {% endif %}
+            </ul>
+        {% endif %}
+
+    </div>
+
+{% endblock %}

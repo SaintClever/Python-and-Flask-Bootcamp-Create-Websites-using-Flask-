@@ -1,0 +1,26 @@
+{% extends "07-solution-base.html"%}
+{% block content %}
+<div class="jumbotron">
+
+  <p>Let see how you performed!!</p>
+  {# Recall that report is a boolean #}
+  {% if report%}
+    <p>Your UserName passed the 3 requirements!</p>
+  {% else %}
+    <p>Oh no! Looks like you had issues with your username!</p>
+    <p>Here are the requirements you failed:</p>
+    <ul>
+      {% if not lower %}
+      <li>You did not use a lowercase character.</li>
+      {% endif %}
+      {% if not upper %}
+      <li>You did not use an uppercase character.</li>
+      {% endif %}
+      {% if not num_end %}
+      <li>You did not end your username with a number.</li>
+      {% endif %}
+
+    </ul>
+  {% endif %}
+</div>
+{% endblock %}

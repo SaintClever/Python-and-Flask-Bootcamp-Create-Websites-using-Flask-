@@ -1,0 +1,12 @@
+Okay, we just learned the basics of migration commands. Let's now go through a
+more realistic example. First let's add a column in our model.
+
+Go back to the models .py file and add a puppy breed column.
+
+Then make a migration script ( a pending migration) with the migrate command.
+
+flask db migrate -m "added breed column"
+
+Now upgrade the database to effect the changes.
+
+flask db upgrade

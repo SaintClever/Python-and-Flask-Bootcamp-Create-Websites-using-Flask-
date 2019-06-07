@@ -30,14 +30,14 @@ class Teacher(db.Model):
 
     def __repr__(self):
         if self.subject:
-            return f'{self.name} will be teaching {self.subject.subject_name}'
+            return f'{self.name} will be teaching {self.subject.name}'
         else:
             return f'{self.name} will not be teaching this semester'
 
-    def report_student(self):
+    def report_students(self):
         print('Students this semester:')
         for student in self.students:
-            print(student.student_name)
+            print(student.name)
 
 
 # class Student
@@ -46,11 +46,11 @@ class Student(db.Model):
     __tablename__ = 'students'
 
     id = db.Column(db.Integer, primary_key=True)
-    student_name = db.Column(db.Text)
+    name = db.Column(db.Text)
     teacher_id = db.Column(db.Integer, db.ForeignKey('teachers.id'))
 
-    def __init__(self, student_name, teacher_id):
-        self.student_name = student_name
+    def __init__(self, name, teacher_id):
+        self.name = name
         self.teacher_id = teacher_id
 
 
@@ -60,11 +60,11 @@ class Subject(db.Model):
     __tablename__ = 'subjects'
 
     id = db.Column(db.Integer, primary_key=True)
-    subject_name = db.Column(db.Text)
+    name = db.Column(db.Text)
     teacher_id = db.Column(db.Integer, db.ForeignKey('teachers.id'))
 
-    def __init__(self, subject_name, teacher_id):
-        self.subject_name = subject_name
+    def __init__(self, name, teacher_id):
+        self.name = name
         self.teacher_id = teacher_id
 
 

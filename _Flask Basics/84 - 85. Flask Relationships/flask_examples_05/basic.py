@@ -1,14 +1,23 @@
-from models import db, Teacher, Student, Subject
+from models import db, Teacher, Subject, Student
 
-db.create_all()
-
-mrs_levy = Teacher('Mrs. Levy')
-db.session.add(mrs_levy)
-db.session.commit()
+# mr_burns = Teacher('Mr. Burns')
+# db.session.add(mr_burns)
+# db.session.commit()
 print(Teacher.query.all())
 
-# mrs_levy = Teacher('Mrs. Levy')
-english = Subject('English', mrs_levy)
-db.session.add(english)
+
+# mr_burns = Teacher.query.filter_by(name='Mr. Burns').first()
+# print(mr_burns)
+# math = Subject('Math', mr_burns.id)
+# db.session.add(math)
+# db.session.commit()
+# print(Subject.query.all())
+
+mr_burns = Teacher.query.filter_by(name='Mr. Burns').first()
+# print(mr_burns)
+adam = Student('Adam', mr_burns.id)
+db.session.add(adam)
 db.session.commit()
-print(Subject.query.all())
+# print(Student.query.all())
+
+mr_burns.report_students()

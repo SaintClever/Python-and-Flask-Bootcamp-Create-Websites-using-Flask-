@@ -2,10 +2,10 @@
 
 {% block content %}
 
-    <h2>Add Puppy</h2>
+    <h3>Delete Puppy</h3>
     <form method="POST">
         {{form.hidden_tag()}}
-        {{form.name.label}}{{form.name()}}
+        {{form.id.label}}{{form.id()}}
         {{form.submit()}}
     </form>
 

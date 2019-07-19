@@ -13,7 +13,7 @@
         <li class="nav-link"><a href="{{url_for('home')}}">Home</a></li>
         
         {% if current_user.is_authenticated %}
-            <li class="nav-link"><a href="{{url_for('logout')}}"></a></li>
+            <li class="nav-link"><a href="{{url_for('logout')}}"></a></li> <!--! No html file associated with this logout. It redirects itself to home -->
         {% else %}
             <li class="nav-link"><a href="{{url_for('login')}}">Log In</a></li>
             <li class="nav-link"><a href="{{url_for('register')}}">Register</a></li>

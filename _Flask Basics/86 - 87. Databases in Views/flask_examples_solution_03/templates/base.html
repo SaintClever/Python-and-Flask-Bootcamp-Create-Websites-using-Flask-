@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Puppy Adoption</title>
+</head>
+<body>
+    
+    <div>
+        <nav>
+            <a href="{{url_for('index')}}">Home</a>
+            <a href="{{url_for('add_pup')}}">Add Pup</a>
+            <a href="{{url_for('delete_pup')}}">Delete Pup</a>
+            <a href="{{url_for('add_owner')}}">Add Owner</a>
+            <a href="{{url_for('list_pups')}}">List Pups</a>
+        </nav>
+    </div>
+
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html>

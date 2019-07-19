@@ -74,6 +74,7 @@ class Owner(db.Model):
     def __init__(self, name, puppy_id):
         self.name = name
         self.puppy_id = puppy_id
+        
 
 if __name__ == '__main__':
     app.run(debug=True)

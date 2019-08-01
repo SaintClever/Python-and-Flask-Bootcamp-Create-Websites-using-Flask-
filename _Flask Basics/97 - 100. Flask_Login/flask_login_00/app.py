@@ -12,7 +12,7 @@ def home():
 
 
 @app.route('/welcome')
-@login_required ## sends your to the home page if you cannot login
+@login_required ## sends you to the home page if you cannot login
 def welcome_user():
     return render_template('welcome_user.html')
 
@@ -36,8 +36,10 @@ def login():
             flash('Logged in Successfully!')
 
             next = request.args.get('next')
+            print(next)
 
             if next == None or not next[0] == '/':
+                print(next)
                 next = url_for('welcome_user')
 
             return redirect(next)
